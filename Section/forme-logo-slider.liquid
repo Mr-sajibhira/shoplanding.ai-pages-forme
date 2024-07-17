@@ -1,0 +1,165 @@
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+{{ 'swiper.js' | asset_url | script_tag }}
+
+
+
+{% liquid
+  assign objectfit = section.settings.objectfit
+%}
+<style>
+
+.id_{{ section.id }}{
+     padding:30px 0px;
+     background-color:#ffffff;
+    }
+
+.id_{{ section.id }} .container{  
+      max-width:1400px;
+     width:100%;
+    margin:0px auto;
+   }
+
+.id_{{ section.id }}  .main_slider{
+     	position: relative;
+       height:auto;
+     }
+ .id_{{ section.id }} img{
+     max-width:100%;
+     width:100%;
+     height:{{section.settings.logo_height}}px;
+     object-fit: {{objectfit}};
+    display:block;
+
+   }
+
+  @media(max-width:768px){
+  
+.id_{{ section.id }}{
+    padding: 20px 20px;
+}
+
+.id_{{ section.id }} .container{
+  max-width:100%;
+}
+ .id_{{ section.id }} img{
+     height:70px;
+   }
+
+ } /*media query */
+
+
+}
+</style>
+<section class="id_{{ section.id }}">
+  <div class="container">
+    <div class="main_slider">
+        <div class="swiper image{{ section.id }}">
+            <div class="swiper-wrapper">
+               {% for block in section.blocks %}
+                {% liquid  
+                  assign logo = block.settings.logo  
+                  assign link = block.settings.url
+                %}
+                 
+               <div class="swiper-slide">
+                   {% if link != blank %}<a href="{{ link }}" target="_blank">{% endif %}
+
+                   {% if logo != blank %}
+                    {{ logo | image_url: width: 1500 | image_tag: loading: 'lazy' }}
+                  {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                     
+                 {% if link != blank %}</a>{% endif %}
+          </div>
+      {% endfor %}
+         </div>
+      </div>
+    </div>
+   </div>
+</section>          
+  <script>
+    var swiper = new Swiper(".image{{ section.id }}", {
+       slidesPerView: 3,
+        breakpoints: {
+      769: {
+        slidesPerView:5,
+        slidesPerGroup: 1,
+      },
+    },
+      spaceBetween: 10,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+    });
+  </script>
+
+{% schema %}
+{
+  "name": "Forme Logos Slider",
+  "settings": [
+    {
+      "type": "range",
+      "min": 50,
+      "max": 200,
+      "step": 2,
+      "default":80,
+      "id": "logo_height",
+      "label": "Logo Height"
+    },
+    {
+      "type":"select",
+      "id":"objectfit",
+      "label": "Object Fit",
+      "options": [
+        {
+          "label": "Cover",
+          "value": "cover"
+        },
+        {
+          "label": "Contain",
+          "value": "contain"
+        },
+        {
+          "label": "None",
+          "value": "unset"
+        }
+      ],
+      "default":"contain"
+    }
+  ],
+  "blocks": [
+
+      {
+        "type":"logoslider",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "URL"
+          }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "Forme Logos Slider",
+      "blocks": [
+        {
+          "type": "logoslider"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+

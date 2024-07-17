@@ -1,0 +1,308 @@
+<style>
+.id_{{ section.id }}{
+  max-width:100%;
+  width:100%;
+  padding:0px;
+  background-color:#ffffff;
+  {% if section.settings.border_top_bottom %}
+  border:solid #000000;
+  border-width:1px 0px;
+   {% endif %}
+}
+.id_{{ section.id }} .container{
+  
+}
+.id_{{ section.id }} .container .row{
+    display: flex;
+    flex-wrap: wrap;
+}  
+.id_{{ section.id }} .container .row .col{
+  max-width:50%;
+  width:100%;
+  padding:20px;
+  box-sizing: border-box;
+} 
+.id_{{ section.id }} .container .row .col.flex{
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.id_{{ section.id }} .container .row .col:nth-child(2){
+    {% if section.settings.border_col %}
+  border:solid #000000;
+  border-width:0px 0px 0px 1px;
+   {% endif %}
+}
+.id_{{ section.id }} .container .content{
+  max-width:700px;
+  width:100%;
+  padding:0px 0px 0px 60px;
+}
+  
+.id_{{ section.id }} h2{
+    font-size: 40px;
+    line-height: 130%;
+    font-weight: 600;
+    color: #24272A;
+    margin: 0px 0px 30px 0px;
+}
+ .id_{{ section.id }} h3{
+    font-size: 30px;
+    line-height: 130%;
+    font-weight: 600;
+    color: #24272A;
+    margin: 0px 0px 30px 0px;
+} 
+  
+.id_{{ section.id }} .des{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #0A0000;
+    margin: 0px 0px 0px 0px;
+}  
+.id_{{ section.id }} .content .des ul{
+    padding-inline-start: 0;
+   margin-block: 0;
+ }
+.id_{{ section.id }} .content .des ul li{
+     list-style: none;
+     margin-bottom:10px;
+     display: flex;
+}
+.id_{{ section.id }} .content .des ul li::before{
+   content: "✔";
+   font-size:20px;
+   font-weight:500;
+   margin-right: 10px;
+  color:#ec7e8b;
+}
+
+  
+.id_{{ section.id }} .btn{
+    display: inline-block;
+    text-decoration: none;
+    transition-duration:.3s;
+    background-color: #000000;
+    color:#ffffff;
+     padding: 8px 24px;
+    border: 1px solid #000000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    border-radius: 4px;
+}
+.id_{{ section.id }} .btn:hover{
+    background-color: #ec7e8b;
+     color:#ffffff;
+   border: 1px solid #ec7e8b;
+}  
+
+.id_{{ section.id }} img{
+  max-width:100%;
+  width:100%;
+  dispaly:block;
+  object-fit: cover;
+   display: block;
+}
+.id_{{ section.id }} p{
+  margin:0px;
+}
+@media(max-width:768px){
+  
+.id_{{ section.id }} .container .row .col{
+  max-width:100%;
+  padding:20px;
+}
+  
+.id_{{ section.id }} .container .content{
+  max-width:100%;
+  padding:0px 0px 30px 0px;
+}
+  .id_{{ section.id }} .container .row .col.flex{
+    order:2;
+  }
+  
+
+
+  .id_{{ section.id }} h2{
+    font-size: 28px;
+    margin: 0px 0px 15px 0px;
+}
+.id_{{ section.id }} h3{
+    font-size: 22px;
+    margin: 0px 0px 15px 0px;
+}
+  
+.id_{{ section.id }} .des{
+    font-size: 16px;
+    margin: 0px 0px 0px 0px;
+} 
+  .id_{{ section.id }} .btn{
+    font-size: 16px;
+}
+  .id_{{ section.id }} .btn svg{
+   width:16px;
+    height:16px;
+}
+  .id_{{ section.id }} .container .row .col.border{
+    {% if section.settings.border_col %}
+     border-width:0px 0px 0px 0px;
+   {% endif %}
+}
+  
+ } /*media query */
+  
+</style>
+
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+     <div class="row">
+         {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'content' %}
+              <div class="col flex">
+                <div class="content">  
+            
+                   {% if block.settings.title != blank %}
+                       <h2>{{ block.settings.title }}</h2>
+                  {% endif %}
+                  
+                  {% if block.settings.title != blank %}
+                       <h3>{{ block.settings.sub_title }}</h3>
+                  {% endif %}
+                  
+                  {% if block.settings.des != blank %}
+                       <div class="des">{{ block.settings.des }}</div>
+                  {% endif %}  
+            
+                  {% if block.settings.btn_url != blank %}
+                    <style> 
+                       .id_{{ section.id }} .des{
+                         margin:0px 0px 50px 0px;
+                       }
+                    @media(max-width:768px){
+                        .id_{{ section.id }} .des{
+                         margin:0px 0px 20px 0px;
+                       }                     
+                    }
+                    
+                    </style>
+                 
+                        <a class="btn" href="{{ block.settings.btn_url }}">
+                          <svg style="margin:0px 5px 0px 0px;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="18" width="18" classname="w-6 h-6" viewBox="0 0 512 512" fill="currentColor">
+                          <path fill="#EFECEC" strokelinecap="round" strokelinejoin="round" d="M0 48A16 16 0 0 1 16 32H64a16 16 0 0 1 15.52 12.128L92.48 96H464a16 16 0 0 1 15.712 18.944l-48 256A16 16 0 0 1 416 384H128a16 16 0 0 1 -15.712 -13.056L64.32 115.424 51.52 64H16a16 16 0 0 1 -16 -16zM99.264 128l42.016 224h261.44l42.016 -224H99.264zM160 384a64 64 0 1 0 0 128 64 64 0 0 0 0 -128zm224 0a64 64 0 1 0 0 128 64 64 0 0 0 0 -128zm-224 32a32 32 0 1 1 0 64 32 32 0 0 1 0 -64zm224 0a32 32 0 1 1 0 64 32 32 0 0 1 0 -64z"/></svg>
+                          {{ block.settings.btn_text }}
+                      </a>
+                 {% endif %}
+              </div>
+          </div>
+        {% when 'image' %}
+           <div class="col">
+             {% if block.settings.img != blank %}
+               
+                <img src="{{ block.settings.img | image_url }}" alt="{{ block.settings.img.alt }}" 
+                  style="aspect-ratio:{{ block.settings.aspect_ratio }}; {% if block.settings.border %} border:1px solid #000000;{% endif %}"
+                  width="100%" height="100%">
+              {% endif %}
+            </div>
+
+         {% endcase %}
+       {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Forme About Us",
+    "settings": [
+
+      {
+        "type": "checkbox",
+        "label": "Border Top Bottom",
+        "id": "border_top_bottom",
+        "default":true
+      },
+      {
+        "type": "checkbox",
+        "label": "Border Column",
+        "id": "border_col",
+        "default":true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name":"Image",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Select Image",
+            "id": "img"
+          },
+          {
+            "type": "text",
+            "label": "Aspect Ratio",
+            "id": "aspect_ratio",
+            "default":"3/2"
+          },
+          {
+        "type": "checkbox",
+        "label": "Border",
+        "id": "border",
+        "default":true
+        }
+        ]
+      },
+      {
+        "type": "content",
+         "name":"Content",
+        "limit": 1,
+        "settings": [
+        {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"We build You a Foundation for Better Performance"
+      },
+        {
+        "type": "text",
+        "label": "Sub Title",
+        "id": "sub_title"
+      },
+      {
+        "type": "richtext",
+        "label": "Description",
+        "id": "des",
+        "default":"<p>Forme®'s posture-correcting activewear is designed to improve your whole body alignment.</p>"
+      },
+      {
+        "type": "text",
+        "label": "Buttom Text",
+        "id": "btn_text",
+        "default":"START IMPROVING YOUR POSTURE"
+      },
+      {
+        "type": "url",
+        "label": "Buttom Url",
+        "id": "btn_url"
+      },
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Forme About Us"
+      }
+    ]
+  }
+{% endschema %}

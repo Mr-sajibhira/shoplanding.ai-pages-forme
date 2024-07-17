@@ -1,0 +1,230 @@
+<style>
+.id_{{ section.id }}{
+  max-width:100%;
+  width:100%;
+  padding:150px 0px;
+  background-image:url({{section.settings.img | image_url}});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.id_{{ section.id }}::after{
+    content:"";
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+    background-color:#222222d9;
+    top:0;
+    right:0;
+}
+    
+.id_{{ section.id }} .container{
+  position: relative;
+    z-index:2;
+    max-width:1200px;
+    width:100%;
+    margin:0px auto;
+}
+
+.id_{{ section.id }} .container .content{
+  max-width:500px;
+  width:100%;
+  padding:0px 0px 0px 0px;
+    text-align: center;
+    margin:0px auto;
+}
+  
+.id_{{ section.id }} h2{
+    font-size: 40px;
+    line-height: 150%;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0px 0px 30px 0px;
+}
+
+  
+.id_{{ section.id }} .des{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+   color: #ffffff;
+    margin: 0px 0px 0px 0px;
+}  
+.id_{{ section.id }} .content .des ul{
+    padding-inline-start: 0;
+   margin-block: 0;
+ }
+.id_{{ section.id }} .content .des ul li{
+     list-style: none;
+     margin-bottom:10px;
+     display: flex;
+    justify-content:center;
+}
+.id_{{ section.id }} .content .des ul li::before{
+   content: "✔";
+   font-size:20px;
+   font-weight:500;
+   margin-right: 10px;
+  color:#ec7e8b;
+}
+
+  
+.id_{{ section.id }} .btn{
+    display: inline-block;
+    text-decoration: none;
+    transition-duration:.3s;
+    background-color: #ffffff;
+    color:#000000;
+     padding: 8px 24px;
+    border: 1px solid #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    border-radius: 4px;
+}
+.id_{{ section.id }} .btn svg{
+    fill:#000000;
+     transition-duration:.3s;
+    }
+.id_{{ section.id }} .btn:hover svg{
+    fill:#ffffff;
+    }
+    
+.id_{{ section.id }} .btn:hover{
+    background-color: #ec7e8b;
+     color:#ffffff;
+   border: 1px solid #ec7e8b;
+}  
+
+.id_{{ section.id }} p{
+  margin:0px;
+}
+@media(max-width:768px){
+  
+.id_{{ section.id }} {
+  padding:80px 20px;
+  {% if section.settings.img2 != blank %}
+   background-image:url({{section.settings.img2 | image_url}});
+   {% endif %}
+}
+  
+.id_{{ section.id }} .container .content{
+  max-width:100%;
+  padding:0px 0px 0px 0px;
+}
+
+
+  .id_{{ section.id }} h2{
+    font-size: 30px;
+    margin: 0px 0px 15px 0px;
+}
+
+  
+.id_{{ section.id }} .des{
+    font-size: 16px;
+    margin: 0px 0px 0px 0px;
+} 
+  .id_{{ section.id }} .btn{
+    font-size: 16px;
+}
+  .id_{{ section.id }} .btn svg{
+   width:16px;
+    height:16px;
+}
+
+  
+ } /*media query */
+  
+</style>
+
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+
+                <div class="content">  
+            
+                   {% if section.settings.title != blank %}
+                       <h2>{{ section.settings.title }}</h2>
+                  {% endif %}
+        
+                  {% if section.settings.des != blank %}
+                       <div class="des">{{ section.settings.des }}</div>
+                  {% endif %}  
+            
+                  {% if section.settings.btn_url != blank %}
+                    <style> 
+                       .id_{{ section.id }} .des{
+                         margin:0px 0px 50px 0px;
+                       }
+                    @media(max-width:768px){
+                        .id_{{ section.id }} .des{
+                         margin:0px 0px 20px 0px;
+                       }                     
+                    }
+                    
+                    </style>
+                 
+                        <a class="btn" href="{{ section.settings.btn_url }}">
+                          <svg style="margin:0px 5px 0px 0px;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="18" width="18" classname="w-6 h-6" viewBox="0 0 512 512" fill="currentColor">
+                          <path  strokelinecap="round" strokelinejoin="round" d="M0 48A16 16 0 0 1 16 32H64a16 16 0 0 1 15.52 12.128L92.48 96H464a16 16 0 0 1 15.712 18.944l-48 256A16 16 0 0 1 416 384H128a16 16 0 0 1 -15.712 -13.056L64.32 115.424 51.52 64H16a16 16 0 0 1 -16 -16zM99.264 128l42.016 224h261.44l42.016 -224H99.264zM160 384a64 64 0 1 0 0 128 64 64 0 0 0 0 -128zm224 0a64 64 0 1 0 0 128 64 64 0 0 0 0 -128zm-224 32a32 32 0 1 1 0 64 32 32 0 0 1 0 -64zm224 0a32 32 0 1 1 0 64 32 32 0 0 1 0 -64z"/></svg>
+                          {{ section.settings.btn_text }}
+                      </a>
+                 {% endif %}
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Forme About Us",
+    "settings": [
+          {
+            "type": "image_picker",
+            "label": "Select BG Image",
+            "id": "img"
+          },
+                {
+            "type": "image_picker",
+            "label": "Select Mobail BG Image",
+            "id": "img2"
+          },
+        {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"We build You a Foundation for Better Performance"
+      },
+      {
+        "type": "richtext",
+        "label": "Description",
+        "id": "des",
+        "default":"<p>Forme®'s posture-correcting activewear is designed to improve your whole body alignment.</p>"
+      },
+      {
+        "type": "text",
+        "label": "Buttom Text",
+        "id": "btn_text",
+        "default":"START IMPROVING YOUR POSTURE"
+      },
+      {
+        "type": "url",
+        "label": "Buttom Url",
+        "id": "btn_url"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Forme BG Section"
+      }
+    ]
+  }
+{% endschema %}

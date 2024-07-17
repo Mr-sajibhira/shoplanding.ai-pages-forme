@@ -1,0 +1,800 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+    "layout": "theme.revbalance",
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "zegsu-header-bar": {
+        "type": "apps",
+        "disabled": true,
+        "settings": {
+          "include_margins": true
+        }
+      },
+      "forme_header_UBRXGa": {
+        "type": "forme-header",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/472241699419063450-d773e1b8-ac65-4fee-99e5-9b21d5fadc7e_1.png",
+          "imglink": "",
+          "img_width": 100,
+          "img_alignment": "0px auto 0px"
+        }
+      },
+      "forme_banner_6fgKVm": {
+        "type": "forme-banner",
+        "settings": {
+          "title": "We build You a Foundation for Better Performance",
+          "des": "Forme®'s posture-correcting activewear is designed to improve your whole body alignment.",
+          "btn_text": "START IMPROVING YOUR POSTURE",
+          "btn_url": "#",
+          "video_url": "https:\/\/youtu.be\/pZyN8Cjb1hg?list=TLGGWoEKiuAR7KAxMTA3MjAyNA",
+          "enable_video_looping": false,
+          "border_top_bottom": true,
+          "border_col": true,
+          "video_border": true
+        }
+      },
+      "forme_logo_slider_gJjpxm": {
+        "type": "forme-logo-slider",
+        "blocks": {
+          "logoslider_kPqF7B": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-a2832351-4f65-4931-aaec-aaad34f440ac.jpg",
+              "url": ""
+            }
+          },
+          "logoslider_NkiNFY": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-06d5ed63-7464-4e90-93fc-2344b009c423.png",
+              "url": ""
+            }
+          },
+          "logoslider_ECRXWd": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-9465b2b7-4a8a-4e8c-af99-7d0b88c01694.png",
+              "url": ""
+            }
+          },
+          "logoslider_9YWeHg": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-bbe14088-ac95-4212-ba0d-a886ba0a1d15.png",
+              "url": ""
+            }
+          },
+          "logoslider_jFLFdP": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-c337c2a6-b42e-41ba-abd3-9a87723d0313.png",
+              "url": ""
+            }
+          },
+          "logoslider_VaLJqe": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-b10fa0c5-416d-4d9d-a444-fae8b970e84f.png",
+              "url": ""
+            }
+          },
+          "logoslider_ApfRgz": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-1e3ec144-86fe-4097-8c07-a0ae0a45220e.png",
+              "url": ""
+            }
+          },
+          "logoslider_43t9Gx": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-add0753d-f0ed-4a9b-aa16-d3e8628b8a48.png",
+              "url": ""
+            }
+          },
+          "logoslider_kwqbb9": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-df4b93e8-13b7-4ad3-8dba-1ce87e9149ef.png",
+              "url": ""
+            }
+          },
+          "logoslider_UkbePq": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-dd645671-36dc-49aa-b004-27848831f7b4.png",
+              "url": ""
+            }
+          },
+          "logoslider_8hY3rD": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-c302defd-13d8-4e70-9864-89ec675b7258.png",
+              "url": ""
+            }
+          },
+          "logoslider_bzrEkr": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-59bd5bb5-c846-4d43-ad67-cbfa0834700a.png",
+              "url": ""
+            }
+          },
+          "logoslider_rDfGKR": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-8d33c152-a167-4282-be64-5a45feff1a27.png",
+              "url": ""
+            }
+          },
+          "logoslider_xez6aA": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-112d6b40-cd4d-4df1-a76d-7d66d28f09b1.png",
+              "url": ""
+            }
+          },
+          "logoslider_8eMXBA": {
+            "type": "logoslider",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/472241699419063450-9208b893-ea86-47da-bc31-e2898a004aba.jpg",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "logoslider_kPqF7B",
+          "logoslider_NkiNFY",
+          "logoslider_ECRXWd",
+          "logoslider_9YWeHg",
+          "logoslider_jFLFdP",
+          "logoslider_VaLJqe",
+          "logoslider_ApfRgz",
+          "logoslider_43t9Gx",
+          "logoslider_kwqbb9",
+          "logoslider_UkbePq",
+          "logoslider_8hY3rD",
+          "logoslider_bzrEkr",
+          "logoslider_rDfGKR",
+          "logoslider_xez6aA",
+          "logoslider_8eMXBA"
+        ],
+        "settings": {
+          "logo_height": 100,
+          "objectfit": "contain"
+        }
+      },
+      "forme_about_us_XjDFca": {
+        "type": "forme-about-us",
+        "blocks": {
+          "image_3zYneQ": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-c3faeffe-2abf-4b18-9962-c6cfe8700084.jpg",
+              "aspect_ratio": "24\/30",
+              "border": true
+            }
+          },
+          "content_TwKMGW": {
+            "type": "content",
+            "settings": {
+              "title": "Boost Your Performance with Cutting-Edge Scientific Apparel",
+              "sub_title": "Discover the Forme® Advantage: Precision-Engineered Apparel",
+              "des": "<ul><li>Reduce neck, back, and shoulder pain<\/li><li>Look and feel more confident<\/li><li>Reduce injury, pain, and stiffness<\/li><\/ul>",
+              "btn_text": "LIVE BETTER NOW",
+              "btn_url": "#"
+            }
+          }
+        },
+        "block_order": [
+          "image_3zYneQ",
+          "content_TwKMGW"
+        ],
+        "settings": {
+          "border_top_bottom": true,
+          "border_col": true
+        }
+      },
+      "forme_icon_box_ACqnfe": {
+        "type": "forme-icon-box",
+        "blocks": {
+          "icon_box_pHEE8b": {
+            "type": "icon_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-565e86d6-c5ae-4d0b-bfa7-1c929ba21d0c.svg",
+              "title": "",
+              "des": "Posture correction and training"
+            }
+          },
+          "icon_box_hWTbKW": {
+            "type": "icon_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-1a9b34f4-e3d7-4271-83b7-2279d009f6e1.svg",
+              "title": "",
+              "des": "Stand and sit taller "
+            }
+          },
+          "icon_box_dYmbfD": {
+            "type": "icon_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-1c05d6c8-beea-4ec5-bf4c-2d8e60b95af8.svg",
+              "title": "",
+              "des": "Improve mobility and balance"
+            }
+          },
+          "icon_box_wbwcix": {
+            "type": "icon_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-44cdb568-7aef-4a99-b3ad-43d8166ae3d4.svg",
+              "title": "",
+              "des": "Improve focus and breathing"
+            }
+          }
+        },
+        "block_order": [
+          "icon_box_pHEE8b",
+          "icon_box_hWTbKW",
+          "icon_box_dYmbfD",
+          "icon_box_wbwcix"
+        ],
+        "settings": {
+          "title": "Unlock A Superior You with Forme®"
+        }
+      },
+      "forme_text_box_jEpYRf": {
+        "type": "forme-text-box",
+        "blocks": {
+          "text_box_wjQYJb": {
+            "type": "text_box",
+            "settings": {
+              "title": "10,000+",
+              "des": "Customers' Lives Transformed"
+            }
+          },
+          "text_box_9zGm86": {
+            "type": "text_box",
+            "settings": {
+              "title": "170+",
+              "des": "Studies Sourced to Create the Prroducts"
+            }
+          },
+          "text_box_nGPGtD": {
+            "type": "text_box",
+            "settings": {
+              "title": "9\/10",
+              "des": "Average Rating from customers "
+            }
+          }
+        },
+        "block_order": [
+          "text_box_wjQYJb",
+          "text_box_9zGm86",
+          "text_box_nGPGtD"
+        ],
+        "settings": {
+        }
+      },
+      "forme_about_us_Re4nE4": {
+        "type": "forme-about-us",
+        "blocks": {
+          "content_DhzqFP": {
+            "type": "content",
+            "settings": {
+              "title": "Transform Your Posture and Unleash Your Potential with Forme®",
+              "sub_title": "The Creation of Compassion and Expertise",
+              "des": "<p>Born from an Orthopedic Surgeon's Love and Expertise, Forme® Revolutionizes Your Body Alignment, Empowering You to Live, Perform, and Thrive at Your Pinnacle.<\/p>",
+              "btn_text": "",
+              "btn_url": ""
+            }
+          },
+          "image_hHwF84": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-1986e31c-7d26-4c3f-9b7b-7e44057f3a0b.jpg",
+              "aspect_ratio": "24\/30",
+              "border": true
+            }
+          }
+        },
+        "block_order": [
+          "content_DhzqFP",
+          "image_hHwF84"
+        ],
+        "settings": {
+          "border_top_bottom": true,
+          "border_col": true
+        }
+      },
+      "forme_icon_box_ydFcpR": {
+        "type": "forme-icon-box",
+        "blocks": {
+          "icon_box_X6rTyn": {
+            "type": "icon_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-565e86d6-c5ae-4d0b-bfa7-1c929ba21d0c.svg",
+              "title": "Health",
+              "des": "Reduce neck, back, and shoulder pain"
+            }
+          },
+          "icon_box_9GHWYn": {
+            "type": "icon_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-1a9b34f4-e3d7-4271-83b7-2279d009f6e1.svg",
+              "title": "Appearance",
+              "des": "Shoulders backStand and sit taller"
+            }
+          },
+          "icon_box_CVdkL3": {
+            "type": "icon_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-1c05d6c8-beea-4ec5-bf4c-2d8e60b95af8.svg",
+              "title": "Performance",
+              "des": "Reduce injury, pain, and stiffness"
+            }
+          },
+          "icon_box_qaLKpk": {
+            "type": "icon_box",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-44cdb568-7aef-4a99-b3ad-43d8166ae3d4.svg",
+              "title": "Mind",
+              "des": "Cognitive wellnessImprove focus and breathing"
+            }
+          },
+          "buttom_yeJmBM": {
+            "type": "buttom",
+            "settings": {
+              "btn_text": "TRY NOW",
+              "btn_url": "#"
+            }
+          }
+        },
+        "block_order": [
+          "icon_box_X6rTyn",
+          "icon_box_9GHWYn",
+          "icon_box_CVdkL3",
+          "icon_box_qaLKpk",
+          "buttom_yeJmBM"
+        ],
+        "settings": {
+          "title": "Elevate Your Well-Being"
+        }
+      },
+      "forme_text_box_gnEHVh": {
+        "type": "forme-text-box",
+        "blocks": {
+          "text_box_ngW9Qt": {
+            "type": "text_box",
+            "settings": {
+              "title": "100's",
+              "des": "Positive Reviews"
+            }
+          },
+          "text_box_g8kkFn": {
+            "type": "text_box",
+            "settings": {
+              "title": "Dozens",
+              "des": "Physicians recommendations"
+            }
+          },
+          "text_box_qRYrnN": {
+            "type": "text_box",
+            "settings": {
+              "title": "Infinite",
+              "des": "Ways your life can be improved"
+            }
+          }
+        },
+        "block_order": [
+          "text_box_ngW9Qt",
+          "text_box_g8kkFn",
+          "text_box_qRYrnN"
+        ],
+        "settings": {
+        }
+      },
+      "forme_table_4E8Bw3": {
+        "type": "forme-table",
+        "blocks": {
+          "title_yaagfw": {
+            "type": "title",
+            "settings": {
+              "title": "Forme® vs. Other"
+            }
+          },
+          "richtext_bchd9P": {
+            "type": "richtext",
+            "settings": {
+              "text": "<p>Forme® is a transformative solution for daily posture training.<\/p>"
+            }
+          },
+          "table_header_ryzwwC": {
+            "type": "table_header",
+            "settings": {
+              "title_1": "",
+              "title_2": "Forme®",
+              "title_3": "Other"
+            }
+          },
+          "table_list_dz4BTV": {
+            "type": "table_list",
+            "settings": {
+              "text": "Instant alignment",
+              "icon_colum_1": "check",
+              "icon_colum_2": "uncheck"
+            }
+          },
+          "table_list_zcKJPE": {
+            "type": "table_list",
+            "settings": {
+              "text": "Posture correction and training",
+              "icon_colum_1": "check",
+              "icon_colum_2": "uncheck"
+            }
+          },
+          "table_list_cnFRyz": {
+            "type": "table_list",
+            "settings": {
+              "text": "Shoulders back",
+              "icon_colum_1": "check",
+              "icon_colum_2": "uncheck"
+            }
+          },
+          "table_list_zzjfhY": {
+            "type": "table_list",
+            "settings": {
+              "text": "Stand and sit taller",
+              "icon_colum_1": "check",
+              "icon_colum_2": "uncheck"
+            }
+          },
+          "table_list_3Jixyp": {
+            "type": "table_list",
+            "settings": {
+              "text": "Quicker recovery",
+              "icon_colum_1": "check",
+              "icon_colum_2": "uncheck"
+            }
+          },
+          "table_list_YMwBgx": {
+            "type": "table_list",
+            "settings": {
+              "text": "Boost endurance",
+              "icon_colum_1": "check",
+              "icon_colum_2": "uncheck"
+            }
+          },
+          "table_list_UdqzqL": {
+            "type": "table_list",
+            "settings": {
+              "text": "Cognitive wellness",
+              "icon_colum_1": "check",
+              "icon_colum_2": "uncheck"
+            }
+          },
+          "table_list_bx8hKK": {
+            "type": "table_list",
+            "settings": {
+              "text": "Improve focus and breathing",
+              "icon_colum_1": "check",
+              "icon_colum_2": "uncheck"
+            }
+          }
+        },
+        "block_order": [
+          "title_yaagfw",
+          "richtext_bchd9P",
+          "table_header_ryzwwC",
+          "table_list_dz4BTV",
+          "table_list_zcKJPE",
+          "table_list_cnFRyz",
+          "table_list_zzjfhY",
+          "table_list_3Jixyp",
+          "table_list_YMwBgx",
+          "table_list_UdqzqL",
+          "table_list_bx8hKK"
+        ],
+        "settings": {
+        }
+      },
+      "forme_rich_text_m3PcDx": {
+        "type": "forme-rich-text",
+        "settings": {
+          "title": "Forme® for Men: Stand Tall, Live Full, Perform Beyond",
+          "des": "",
+          "btn_text": "BUY NOW",
+          "btn_url": "#",
+          "bg_color": "#000000",
+          "text_color": "#ffffff"
+        }
+      },
+      "forme_about_us_pC3M4N": {
+        "type": "forme-about-us",
+        "blocks": {
+          "content_trYBw9": {
+            "type": "content",
+            "settings": {
+              "title": "Ace Tee",
+              "sub_title": "",
+              "des": "<p>Pair it with the Pro Short or Ergo Short for full-body alignment. Please refer to our Health Benefits page on the website for help with musculoskeletal disorders.<\/p>",
+              "btn_text": "BUY NOW",
+              "btn_url": "#"
+            }
+          },
+          "image_awaDRb": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-913c3497-d35a-427b-8d23-b30fae379fbf.jpg",
+              "aspect_ratio": "24\/30",
+              "border": true
+            }
+          }
+        },
+        "block_order": [
+          "content_trYBw9",
+          "image_awaDRb"
+        ],
+        "settings": {
+          "border_top_bottom": false,
+          "border_col": true
+        }
+      },
+      "forme_about_us_Azgtz7": {
+        "type": "forme-about-us",
+        "blocks": {
+          "image_dC6gi3": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-27fc009b-eafb-4578-b98c-d2e2d26d4b43.jpg",
+              "aspect_ratio": "24\/30",
+              "border": true
+            }
+          },
+          "content_twgzct": {
+            "type": "content",
+            "settings": {
+              "title": "Ace+ Polo",
+              "sub_title": "",
+              "des": "<p>Introducing the Ace + Polo, the only golf polo with built-in posture-correcting technology. The Ace+ Polo is constructed with dual layers of inner wearable technology and outer layers of lightweight moisture-wicking, premium fabric designed for athletes to wear on and off the course. Popular for daily activities, working out, and traveling, the Ace+ Polo instills powerful health benefits. <\/p>",
+              "btn_text": "SHOP NOW",
+              "btn_url": "#"
+            }
+          }
+        },
+        "block_order": [
+          "image_dC6gi3",
+          "content_twgzct"
+        ],
+        "settings": {
+          "border_top_bottom": true,
+          "border_col": true
+        }
+      },
+      "forme_about_us_w3tnWN": {
+        "type": "forme-about-us",
+        "blocks": {
+          "content_jWPDWP": {
+            "type": "content",
+            "settings": {
+              "title": "Core Long Sleeve",
+              "sub_title": "",
+              "des": "<p>Some may feel underarm pressure upon first wear. You may size up or consider wearing Forme® over a light tee for a few days to allow body adaptation. <\/p>",
+              "btn_text": "SHOP NOW",
+              "btn_url": "#"
+            }
+          },
+          "image_3qCr7e": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-ab4c7481-804d-48ec-b185-ff35fa117716.jpg",
+              "aspect_ratio": "24\/30",
+              "border": true
+            }
+          }
+        },
+        "block_order": [
+          "content_jWPDWP",
+          "image_3qCr7e"
+        ],
+        "settings": {
+          "border_top_bottom": false,
+          "border_col": true
+        }
+      },
+      "forme_about_us_pRKwjg": {
+        "type": "forme-about-us",
+        "blocks": {
+          "image_XMRJbx": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-9e5ba904-3584-4241-a209-78364dcc1246.jpg",
+              "aspect_ratio": "24\/30",
+              "border": true
+            }
+          },
+          "content_DnLtwi": {
+            "type": "content",
+            "settings": {
+              "title": "Ace Long Sleeve",
+              "sub_title": "",
+              "des": "<p>Designed by an orthopedic surgeon to help his mother battle poor posture and compressed lungs from cancer, Forme® will transform your whole body alignment, giving you a posture that allows you to perform, think, and live at your highest potential.<\/p>",
+              "btn_text": "BUY NOW",
+              "btn_url": "#"
+            }
+          }
+        },
+        "block_order": [
+          "image_XMRJbx",
+          "content_DnLtwi"
+        ],
+        "settings": {
+          "border_top_bottom": true,
+          "border_col": true
+        }
+      },
+      "forme_review_section_cfRxwk": {
+        "type": "forme-review-section",
+        "blocks": {
+          "review_box_FYXhxK": {
+            "type": "review_box",
+            "settings": {
+              "title": "C.T. Pan",
+              "des": "“Within seconds of wearing Forme, I got great posture. My arms were rolled back, which is important for golf. I also felt my neck was relaxed, which is perfect for travel and recovery after competitions.” "
+            }
+          },
+          "review_box_zwwPp4": {
+            "type": "review_box",
+            "settings": {
+              "title": "Answorth Allen",
+              "des": "“I have been wearing Forme since 2019, and it has been very helpful in my occupation and living. A lot of my patients wear Forme after shoulder surgery to avoid stiffness and pain. Many of my players also wear it for recovery, travel and sleep.”"
+            }
+          },
+          "review_box_GhVL4Y": {
+            "type": "review_box",
+            "settings": {
+              "title": "Erynn Ballard",
+              "des": "“I have been wearing the Forme bras now for almost 2 years. I believe so much in the Forme sports bra for equestrian athletes and daily training in and outside of the sport.”  "
+            }
+          }
+        },
+        "block_order": [
+          "review_box_FYXhxK",
+          "review_box_zwwPp4",
+          "review_box_GhVL4Y"
+        ],
+        "settings": {
+          "title": "Experience the Forme® Advantage"
+        }
+      },
+      "forme_rich_text_D7eNCj": {
+        "type": "forme-rich-text",
+        "settings": {
+          "title": "Forme®: Your Transformation Solution",
+          "des": "It has the same eco-friendly Tencel fabric outer layer and wearable tech inner layer as the best-selling Core Tee. The Core Long Sleeve is super soft and breathable and can be easily worn as your daily wear with powerful health benefits.",
+          "btn_text": "BUY NOW",
+          "btn_url": "#",
+          "bg_color": "#ffffff",
+          "text_color": "#000000"
+        }
+      },
+      "forme_accordion_7mCy3d": {
+        "type": "forme-accordion",
+        "blocks": {
+          "image_byDhfi": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-c2f8d54b-3ac7-4d13-84b1-c15abc844606.png",
+              "aspect_ratio": "24\/30",
+              "border": true
+            }
+          },
+          "accordion_bXRgwy": {
+            "type": "accordion",
+            "settings": {
+              "title": "Where is Forme® manufactured?",
+              "des": "We believe in having a positive and enriching impact on the community, which is why all of our products are manufactured at home in the USA. We want to foster great relationships with our vendors, support our community, and maintain excellent quality control by staying local. Many of our facilities utilize clean energy and we have incorporated biodegradable elements into our packaging."
+            }
+          },
+          "accordion_4qHrKz": {
+            "type": "accordion",
+            "settings": {
+              "title": "When should I wear Forme?",
+              "des": "Forme is designed to be worn daily and can enhance your daily activities, from your desk to your workout. The technology within Forme is seamless and powerful, delivering effective posture correction in a high-performance garment that looks just like normal activewear."
+            }
+          },
+          "accordion_REHbNk": {
+            "type": "accordion",
+            "settings": {
+              "title": "How does wearing Forme improve my posture?",
+              "des": "You will notice an immediate difference in your posture when you first put on Forme. However, with daily, regular wear, your body will develop muscle memory to restore ideal posture without conscious effort. Ultimately, the goal of Forme is to create a biomechanical awareness of your body’s alignment, so that it keeps you in alignment subconsciously much like walking or breathing. Forme is about redefining your standard of performance and redefining the basic form of you."
+            }
+          },
+          "accordion_cWGzmB": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do the products fit?",
+              "des": "Since our products are not regular activewear, they will fit everyone differently depending on your body type. Please remember: the items are designed to be form-fitting."
+            }
+          },
+          "accordion_djmUjR": {
+            "type": "accordion",
+            "settings": {
+              "title": "Is there a specific way to care for the item(s)?",
+              "des": "Take good care of your Forme products, and they'll take good care of you. We recommend washing the products on cold and air drying them. Avoid using fabric softener or dryer sheets, as they can inhibit Forme’s moisture-wicking and UV protective quality, as well as break down the fibers that make them stretchy and firm."
+            }
+          }
+        },
+        "block_order": [
+          "image_byDhfi",
+          "accordion_bXRgwy",
+          "accordion_4qHrKz",
+          "accordion_REHbNk",
+          "accordion_cWGzmB",
+          "accordion_djmUjR"
+        ],
+        "settings": {
+          "title": "Why Forme® is worth every sip?",
+          "border_top_bottom": true
+        }
+      },
+      "forme_bg_section_cPEGVK": {
+        "type": "forme-bg-section",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/472241699419063450-dbb5e226-971c-46c3-b88d-5e009f63fa4e.jpg",
+          "img2": "shopify:\/\/shop_images\/472241699419063450-ac5f0e30-ccda-4064-ab5d-d0c399ff1f05.jpg",
+          "title": "Transform your body with Forme",
+          "des": "<ul><li>Guaranteed Satisfaction<\/li><li>Free returns<\/li><li>Backed by Science<\/li><\/ul>",
+          "btn_text": "UNLOCK YOUR FULL POTENTIAL",
+          "btn_url": "#"
+        }
+      },
+      "forme_header_6GaPVP": {
+        "type": "forme-header",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/472241699419063450-d773e1b8-ac65-4fee-99e5-9b21d5fadc7e_1.png",
+          "imglink": "",
+          "img_width": 100,
+          "img_alignment": "0px auto 0px"
+        }
+      }
+    },
+    "order": [
+      "main",
+      "zegsu-header-bar",
+      "forme_header_UBRXGa",
+      "forme_banner_6fgKVm",
+      "forme_logo_slider_gJjpxm",
+      "forme_about_us_XjDFca",
+      "forme_icon_box_ACqnfe",
+      "forme_text_box_jEpYRf",
+      "forme_about_us_Re4nE4",
+      "forme_icon_box_ydFcpR",
+      "forme_text_box_gnEHVh",
+      "forme_table_4E8Bw3",
+      "forme_rich_text_m3PcDx",
+      "forme_about_us_pC3M4N",
+      "forme_about_us_Azgtz7",
+      "forme_about_us_w3tnWN",
+      "forme_about_us_pRKwjg",
+      "forme_review_section_cfRxwk",
+      "forme_rich_text_D7eNCj",
+      "forme_accordion_7mCy3d",
+      "forme_bg_section_cPEGVK",
+      "forme_header_6GaPVP"
+    ]
+  }
+  

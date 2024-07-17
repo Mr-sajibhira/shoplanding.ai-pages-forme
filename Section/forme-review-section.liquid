@@ -1,0 +1,228 @@
+<style>
+.id_{{ section.id }}{
+  max-width:100%;
+  width:100%;
+  padding:60px 0px;
+  background-color:#000000;
+}
+.id_{{ section.id }} .container{
+  max-width:1200px;
+  width:100%;
+  margin:0px auto;
+  
+}
+.id_{{ section.id }} .container .row{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin:-15px;
+}  
+.id_{{ section.id }} .container .row .col{
+  max-width:33.33%;
+  width:100%;
+  padding:15px;
+  box-sizing: border-box;
+  
+} 
+
+ .id_{{ section.id }} h3{
+    font-size: 40px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+   
+   
+} 
+ .id_{{ section.id }} .review_box{
+   padding:20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color:#ffffff;
+   height:100%;
+ }
+ .id_{{ section.id }} .review{
+    display:flex;
+    gap:5px;
+   margin:0px 0px 10px 0px;
+ }
+.id_{{ section.id }}  .review svg{
+     fill:#000000;
+  }
+.id_{{ section.id }}  .title_box{
+  display:flex;
+  align-items: center;
+   margin:0px 0px 15px 0px;
+}
+.id_{{ section.id }}  .title_box h3{
+    display: inline-block;
+     font-size: 20px;
+    line-height: 150%;
+    font-weight: 700;
+    color: #000000;
+    margin: 0px 10px 0px 0px;
+}
+.id_{{ section.id }} .verified{
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    padding:6px 16px;
+   border-radius: 30px;
+   background-color:#000000;
+  display: flex;
+  justify-content: center;
+   align-items: center;
+}
+  
+ 
+ .id_{{ section.id }} p{
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #000000;
+    margin: 0px 0px 0px 0px;
+} 
+  
+
+
+
+@media(max-width:768px){
+  
+  .id_{{ section.id }}{
+    padding:40px 20px;
+  }
+  
+.id_{{ section.id }} .container .row{
+    margin:-15px;
+    justify-content: center;
+  }
+  
+.id_{{ section.id }} .container .row .col{
+  max-width:100%;
+  padding:15px;
+}
+
+
+  .id_{{ section.id }} h3{
+    font-size: 30px;
+}  
+ .id_{{ section.id }} .review{
+    justify-content: center;
+ }
+ .id_{{ section.id }}  .title_box {
+     gap:10px;
+    flex-direction: column;
+}
+.id_{{ section.id }}  .title_box h3{
+     font-size: 24px;
+    margin: 0px 0px 0px 0px;
+}
+
+.id_{{ section.id }} p {
+    font-size: 16px;
+    text-align: center;
+}
+.id_{{ section.id }} .verified{
+    font-size: 14px;
+}
+  
+ } /*media query */
+  
+</style>
+
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">  
+      <h3>{{ section.settings.title }}</h3> 
+     <div class="row">
+         {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'review_box' %}
+              <div class="col">
+                <div class="review_box">    
+
+                  <div class="review">
+                    <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" classname="w-6 h-6" viewBox="0 0 512 512" ><path strokelinecap="round" strokelinejoin="round" d="M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z"></path></svg>
+                      <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" classname="w-6 h-6" viewBox="0 0 512 512" ><path  strokelinecap="round" strokelinejoin="round" d="M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z"></path></svg>
+                      <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" classname="w-6 h-6" viewBox="0 0 512 512" ><path strokelinecap="round" strokelinejoin="round" d="M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z"></path></svg>
+                      <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" classname="w-6 h-6" viewBox="0 0 512 512" ><path  strokelinecap="round" strokelinejoin="round" d="M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z"></path></svg>
+                      <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" classname="w-6 h-6" viewBox="0 0 512 512" ><path  strokelinecap="round" strokelinejoin="round" d="M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z"></path></svg>
+                  </div>
+                  <div class="title_box">
+                      <h3>{{ block.settings.title }}</h3> 
+                       <p class="verified">Verified Purchase</p>
+                  </div>
+
+                     {% if block.settings.des != blank %}
+                       <p>{{ block.settings.des }}</p>
+                    {% endif %}
+              </div>
+          </div>
+
+         {% endcase %}
+       {% endfor %}
+         </div>               
+  </div>
+</section>
+
+
+
+
+
+
+{% schema %}
+  {
+     "name": "Forme Review Section",
+    "settings": [
+             {
+          "type": "text",
+          "label": "Title",
+          "id": "title",
+          "default":"Experience the Forme® Advantage"
+         }
+    ],
+    "blocks": [
+      {
+        "type": "review_box",
+        "name":"Review Box",
+        "limit": 3,
+        "settings": [
+          {
+          "type": "text",
+          "label": "Title",
+          "id": "title",
+          "default":"C.T. Pan"
+         },
+          {
+            "type": "text",
+            "label": "Description",
+            "id": "des",
+            "default":"Within seconds of wearing Forme, I got great posture. My arms were rolled back, which is important for golf. I also felt my neck was relaxed, which is perfect for travel and recovery after competitions."
+          }
+
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Forme Review Section",
+        "blocks": [
+          {
+            "type": "review_box"
+          },
+           {
+            "type": "review_box"
+          },
+                    {
+            "type": "review_box"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

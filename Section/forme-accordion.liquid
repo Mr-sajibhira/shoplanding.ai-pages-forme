@@ -1,0 +1,279 @@
+<style>
+.id_{{ section.id }}{
+  max-width:100%;
+  width:100%;
+  padding:60px 0px 40px 0px;
+  background-color:#ffffff;
+  {% if section.settings.border_top_bottom %}
+  border:solid #000000;
+  border-width:1px 0px;
+   {% endif %}
+}
+.id_{{ section.id }} .container{
+  
+}
+.id_{{ section.id }} .container .row{
+    display: flex;
+    flex-wrap: wrap;
+}  
+.id_{{ section.id }} .container .row .col{
+  max-width:50%;
+  width:100%;
+  padding:20px;
+  box-sizing: border-box;
+} 
+.id_{{ section.id }} .container .row .col.flex{
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.id_{{ section.id }} .container .content{
+  max-width:700px;
+  width:100%;
+  padding:0px 0px 0px 60px;
+}
+  
+.id_{{ section.id }} h2{
+    font-size: 40px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #24272A;
+    margin: 0px 0px 10px 0px;
+  text-align: center;
+}
+
+.id_{{ section.id }} img{
+  max-width:100%;
+  width:100%;
+  dispaly:block;
+  object-fit: cover;
+   display: block;
+}
+
+ .id_{{ section.id }} h3{
+     font-size: 20px;
+    line-height: 150%;
+    font-weight: 600;
+    color: #000000;
+    margin: 0px 0px 0px 0px;
+   padding:10px 24px 10px 0px;
+    border: solid #e7e7eb;
+    border-width: 0px 0px 1px 0px;
+    position: relative;
+ }
+  .id_{{ section.id }} h3::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #ec7e8b;
+    right: 5px;
+    top: 50%;
+    transform: rotate(90deg);
+    transition: 0.2s ease-out;
+  } 
+ .id_{{ section.id }} h3.active::after{
+   transform: rotate(0deg);
+ }
+  .id_{{ section.id }} h3::before{
+    content:"";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    right: 5px;
+    top: 50%;
+    background-color: #ec7e8b;
+    display: block;
+  }
+ .id_{{ section.id }} .panel {
+  padding: 0px 0px;
+   margin:0px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+ .id_{{ section.id }} .panel p{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #0A0000;
+    margin: 10px 0px 10px 0px;
+}  
+  
+@media(max-width:768px){
+
+.id_{{ section.id }}{
+  padding:40px 0px 10px 0px;
+}
+.id_{{ section.id }} .container .row .col{
+  max-width:100%;
+  padding:20px;
+}
+  
+.id_{{ section.id }} .container .content{
+  max-width:100%;
+  padding:0px 0px 30px 0px;
+}
+  .id_{{ section.id }} .container .row .col.flex{
+    order:2;
+  }
+  
+  .id_{{ section.id }} h2{
+    font-size: 30px;
+    margin: 0px 0px 30px 0px;
+}
+.id_{{ section.id }} h3{
+    font-size: 18px;
+    margin: 0px 0px 0px 0px;
+}
+  
+ .id_{{ section.id }} .panel p{
+    font-size: 16px;
+} 
+
+ .id_{{ section.id }} h3::after{
+    width: 20px;
+  } 
+  .id_{{ section.id }} h3::before{
+    width: 20px;
+  }
+
+  
+ } /*media query */
+  
+</style>
+
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+    {% if section.settings.title != blank %}
+     <h2>{{ section.settings.title }}</h2> 
+     {% endif %}
+     <div class="row">
+       
+          <div class="col">
+            {% for block in section.blocks %}
+                {% case block.type %}
+              {% when 'image' %}
+             {% if block.settings.img != blank %}
+               
+                <img src="{{ block.settings.img | image_url }}" alt="{{ block.settings.img.alt }}" 
+                  style="aspect-ratio:{{ block.settings.aspect_ratio }}; {% if block.settings.border %} border:1px solid #000000;{% endif %}"
+                  width="100%" height="100%">
+              {% endif %}
+          
+
+         {% endcase %}
+       {% endfor %}
+        </div>
+        
+           
+              <div class="col flex">
+                <div class="content">  
+                   {% for block in section.blocks %}
+                     {% case block.type %}
+                       {% when 'accordion' %}
+                          <div> 
+                           <h3 class="{{ section.id }}accordion">{{ block.settings.title }}</h3>
+                           <div class="panel"> <p>{{ block.settings.des }}</p> </div>
+                       </div>
+                     {% endcase %}
+                {% endfor %}
+              </div>
+          </div>
+        
+
+    </div>
+  </div>
+</section>
+
+<script>
+var acc = document.getElementsByClassName("{{ section.id }}accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+
+{% schema %}
+  {
+   "name": "Forme Accordion",
+    "settings": [
+        {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"Why Forme® is worth every sip?"
+      },
+
+      {
+        "type": "checkbox",
+        "label": "Border Top Bottom",
+        "id": "border_top_bottom",
+        "default":true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name":"Image",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Select Image",
+            "id": "img"
+          },
+          {
+            "type": "text",
+            "label": "Aspect Ratio",
+            "id": "aspect_ratio",
+            "default":"3/2"
+          },
+          {
+        "type": "checkbox",
+        "label": "Border",
+        "id": "border",
+        "default":true
+        }
+        ]
+      },
+      {
+        "type": "accordion",
+         "name":" Accordion",
+        "settings": [
+        {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"We build You a Foundation for Better Performance"
+      },
+      {
+        "type": "textarea",
+        "label": "Description",
+        "id": "des",
+        "default":"Forme®'s posture-correcting activewear is designed to improve your whole body alignment."
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Forme Accordion"
+      }
+    ]
+  }
+{% endschema %}

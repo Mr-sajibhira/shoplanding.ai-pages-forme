@@ -1,0 +1,271 @@
+<style>
+.id_{{ section.id }}{
+  max-width:100%;
+  width:100%;
+  padding:0px;
+  background-color:#ffffff;
+  {% if section.settings.border_top_bottom %}
+  border:solid #000000;
+  border-width:1px 0px;
+   {% endif %}
+}
+.id_{{ section.id }} .container{
+  
+}
+.id_{{ section.id }} .container .row{
+    display: flex;
+    flex-wrap: wrap;
+}  
+.id_{{ section.id }} .container .row .col{
+  max-width:50%;
+  width:100%;
+  padding:20px;
+  box-sizing: border-box;
+} 
+.id_{{ section.id }} .container .row .col.flex{
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.id_{{ section.id }} .container .row .col.border{
+    {% if section.settings.border_col %}
+  border:solid #000000;
+  border-width:0px 0px 0px 1px;
+   {% endif %}
+}
+.id_{{ section.id }} .container .content{
+  max-width:600px;
+  width:100%;
+  padding:0px 0px 0px 60px;
+}
+  
+.id_{{ section.id }} h2{
+    font-size: 40px;
+    line-height: 130%;
+    font-weight: 600;
+    color: #24272A;
+    margin: 0px 0px 30px 0px;
+}
+.id_{{ section.id }} p{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #0A0000;
+    margin: 0px 0px 50px 0px;
+}  
+  
+.id_{{ section.id }} .btn{
+    display: inline-block;
+    text-decoration: none;
+    transition-duration:.3s;
+    background-color: #000000;
+    color:#ffffff;
+     padding: 8px 24px;
+    border: 1px solid #000000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    border-radius: 4px;
+}
+.id_{{ section.id }} .btn:hover{
+    background-color: #ec7e8b;
+     color:#ffffff;
+   border: 1px solid #ec7e8b;
+}  
+
+.id_{{ section.id }} iframe{
+  aspect-ratio: 3/2;
+  max-width:100%;
+  width:100%;
+
+{% if section.settings.video_border %}
+  border:1px solid #000000;
+{% endif %}
+
+}
+
+@media(max-width:768px){
+  
+.id_{{ section.id }} .container .row .col{
+  max-width:100%;
+  padding:20px 0px;
+}
+  
+.id_{{ section.id }} .container .content{
+  max-width:100%;
+  padding:0px 20px 20px 20px;
+   text-align: center;
+}
+.id_{{ section.id }} .container .row .col.flex{
+   order:2;
+}
+
+  .id_{{ section.id }} h2{
+    font-size: 28px;
+    margin: 0px 0px 15px 0px;
+}
+.id_{{ section.id }} p{
+    font-size: 16px;
+    margin: 0px 0px 20px 0px;
+} 
+  .id_{{ section.id }} .btn{
+    font-size: 16px;
+}
+  .id_{{ section.id }} .btn svg{
+   width:16px;
+    height:16px;
+}
+  .id_{{ section.id }} .container .row .col.border{
+    {% if section.settings.border_col %}
+     border-width:0px 0px 0px 0px;
+   {% endif %}
+}
+  
+ } /*media query */
+  
+</style>
+
+{%liquid  
+     assign video_url =  section.settings.video_url
+     assign video =  section.settings.video
+     assign enable_video_looping =  section.settings.enable_video_looping
+     assign video_id = section.settings.video.id | default: section.settings.video_url.id
+%}
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">
+     <div class="row">
+       <div class="col flex">
+         <div class="content">  
+          <h2>{{ section.settings.title }}</h2>
+          <p>{{ section.settings.des }}</p>
+         {% if section.settings.btn_url != blank %}
+             <a class="btn" href="{{ section.settings.btn_url }}">
+                <svg style="margin:0px 5px 0px 0px;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="18" width="18" classname="w-6 h-6" viewBox="0 0 512 512" fill="currentColor">
+                <path fill="#EFECEC" strokelinecap="round" strokelinejoin="round" d="M0 48A16 16 0 0 1 16 32H64a16 16 0 0 1 15.52 12.128L92.48 96H464a16 16 0 0 1 15.712 18.944l-48 256A16 16 0 0 1 416 384H128a16 16 0 0 1 -15.712 -13.056L64.32 115.424 51.52 64H16a16 16 0 0 1 -16 -16zM99.264 128l42.016 224h261.44l42.016 -224H99.264zM160 384a64 64 0 1 0 0 128 64 64 0 0 0 0 -128zm224 0a64 64 0 1 0 0 128 64 64 0 0 0 0 -128zm-224 32a32 32 0 1 1 0 64 32 32 0 0 1 0 -64zm224 0a32 32 0 1 1 0 64 32 32 0 0 1 0 -64z"/></svg>
+               {{ section.settings.btn_text }}</a>
+          {% endif %}
+      </div>
+     </div>
+     <div class="col border">
+              <div class="video_div">
+              {%- if video == null and video_url != null -%}
+                {%- liquid
+                  assign loop = ''
+                  if enable_video_looping
+                    assign loop = '&loop=1&playlist=' | append: video_id
+                  endif
+                -%}
+                {%- if video_url.type == 'youtube' -%}
+                  <iframe
+                    src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                    class="js-youtube"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    title="{{ content | escape }}"
+                  ></iframe>
+                {%- else -%}
+                  <iframe
+                    src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
+                    class="js-vimeo"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    title="{{ content | escape }}"
+                  ></iframe>
+                {%- endif -%}
+              {%- else -%}
+                {{
+                  block.settings.video
+                  | video_tag:
+                    image_size: '1100x',
+                    autoplay: true,
+                    loop: enable_video_looping,
+                    controls: true,
+                    muted: false
+                }}
+              {%- endif -%}
+            </div>   
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Forme Banner",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default":"We build You a Foundation for Better Performance"
+      },
+      {
+        "type": "text",
+        "label": "Description",
+        "id": "des",
+        "default":"Forme®'s posture-correcting activewear is designed to improve your whole body alignment."
+      },
+      {
+        "type": "text",
+        "label": "Buttom Text",
+        "id": "btn_text",
+        "default":"START IMPROVING YOUR POSTURE"
+      },
+      {
+        "type": "url",
+        "label": "Buttom Url",
+        "id": "btn_url"
+      },
+                  {
+              "type": "video_url",
+              "id": "video_url",
+              "accept": ["youtube", "vimeo"],
+              "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+              "label": "t:sections.video.settings.video_url.label",
+              "info": "t:sections.video.settings.video_url.info"
+            },
+            {
+            "type": "video",
+            "id": "video",
+            "label": "t:sections.video.settings.video.label"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_video_looping",
+            "label": "t:sections.video.settings.enable_video_looping.label",
+            "default": false
+          },
+      {
+        "type": "checkbox",
+        "label": "Border Top Bottom",
+        "id": "border_top_bottom",
+        "default":true
+      },
+      {
+        "type": "checkbox",
+        "label": "Border Column",
+        "id": "border_col",
+        "default":true
+      },
+        {
+        "type": "checkbox",
+        "label": "Border Video",
+        "id": "video_border",
+        "default":true
+      }
+    ],
+    "presets": [
+      {
+        "name": "Forme Banner"
+      }
+    ]
+  }
+{% endschema %}

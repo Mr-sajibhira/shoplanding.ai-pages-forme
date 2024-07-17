@@ -1,0 +1,133 @@
+<style>
+.id_{{ section.id }}{
+  max-width:100%;
+  width:100%;
+  padding:60px 0px;
+  background-color:#000000;
+}
+.id_{{ section.id }} .container{
+  max-width:1200px;
+  width:100%;
+  margin:0px auto;
+  
+}
+.id_{{ section.id }} .container .row{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin:-20px;
+}  
+.id_{{ section.id }} .container .row .col{
+  max-width:33.33%;
+  width:100%;
+  padding:20px;
+  box-sizing: border-box;
+} 
+
+ .id_{{ section.id }} h3{
+    font-size: 35px;
+    line-height: 120%;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+} 
+ .id_{{ section.id }} p{
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+} 
+  
+
+
+
+@media(max-width:768px){
+  
+  .id_{{ section.id }}{
+    padding:40px 20px;
+  }
+  
+.id_{{ section.id }} .container .row{
+    margin:-15px;
+    justify-content: center;
+  }
+  
+.id_{{ section.id }} .container .row .col{
+  max-width:50%;
+  padding:15px;
+}
+
+
+  .id_{{ section.id }} h3{
+    font-size: 30px;
+}  
+  
+ } /*media query */
+  
+</style>
+
+
+
+<section class="id_{{ section.id }}">
+  <div class="container">  
+     <div class="row">
+         {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'text_box' %}
+              <div class="col">
+                <div class="text_box">           
+                   {% if block.settings.title != blank %}
+                       <h3>{{ block.settings.title }}</h3>
+                    {% endif %}
+                     {% if block.settings.des != blank %}
+                       <p>{{ block.settings.des }}</p>
+                    {% endif %}
+              </div>
+          </div>
+
+         {% endcase %}
+       {% endfor %}
+         </div>               
+  </div>
+</section>
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Forme Text Box",
+    "blocks": [
+      {
+        "type": "text_box",
+        "name":"Text Box",
+        "limit": 3,
+        "settings": [
+          {
+          "type": "text",
+          "label": "Title",
+          "id": "title",
+          "default":"Dozens"
+         },
+          {
+            "type": "text",
+            "label": "Sub Title",
+            "id": "des",
+            "default":"Physicians recommendations"
+          }
+
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Forme Text Box"
+      }
+    ]
+  }
+{% endschema %}
